@@ -9,7 +9,7 @@ string toUpperCase(string text)
     {
         if (text[i] >= 'a' && text[i] <= 'z')
         {
-            text[i] = text[i] - 'a' + 'A';
+            text[i] = text[i] - 'a' + 'A'; // Convert to uppercase using ASCII logic
         }
     }
     return text;
@@ -35,7 +35,7 @@ string autoKeyEncrypt(string plaintext, string key)
 
         if (p >= 'A' && p <= 'Z')
         {
-            char c = ((p - 'A') + (k - 'A')) % 26 + 'A';
+            char c = ((p - 'A') + (k - 'A')) % 26 + 'A'; // Ci = (Pi + Ki) mod 26
             ciphertext += c;
         }
     }
