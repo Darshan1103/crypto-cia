@@ -15,6 +15,18 @@ string toUpperCase(string text)
     return text;
 }
 
+// Custom Hash function 
+int polyHash(string text) {
+    int hash = 13;
+    int p = 41;
+
+    for (char c : text) {
+        hash = ((hash * p) ^ c) % 100057;
+    }
+
+    return hash;
+}
+
 // Encryption Function
 string autoKeyEncrypt(string plaintext, string key)
 {
@@ -93,7 +105,11 @@ int main()
         key = toUpperCase(key);
 
         string cipher = autoKeyEncrypt(text, key);
+
+        int hashValue = polyHash(cipher);
+
         cout << "Ciphertext: " << cipher << endl;
+        cout << "Hash Value: " << hashValue << endl;
     }
     else if (choice == 2)
     {
@@ -107,6 +123,7 @@ int main()
         key = toUpperCase(key);
 
         string plain = autoKeyDecrypt(text, key);
+
         cout << "Decrypted Plaintext: " << plain << endl;
     }
     else
