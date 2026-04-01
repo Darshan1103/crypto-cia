@@ -4,7 +4,6 @@
 
 To implement the **Auto Key Cipher** in C++ for performing both **encryption, hashing and decryption**, and to understand the working of classical cryptographic techniques.
 
----
 
 ## Theory
 
@@ -17,7 +16,7 @@ In this method:
 * This reduces repetition and increases security
 
 In addition to encryption, a hash function is used to ensure data integrity. A hash function converts the ciphertext into a fixed-size numerical value (hash). In this program, a custom hash function based on multiplication and XOR operations is used.
----
+
 
 ## Encryption
 
@@ -32,7 +31,6 @@ Ci = (Pi + Ki) mod 26
 3. Apply the formula to each character
 4. Generate ciphertext
 
----
 
 ## Decryption
 
@@ -47,7 +45,7 @@ Pi = (Ci - Ki + 26) mod 26
 3. Use decrypted plaintext to extend the key
 4. Recover the original plaintext
 
----
+
 
 ## Custom Hash Function
 
@@ -70,7 +68,7 @@ Hash = ((Hash × 41) XOR character) mod 100057
 hash = ((hash * 41) ^ c) % 100057;
 ```
 
----
+
 
 ## ⚙️ Working
 
@@ -87,7 +85,7 @@ hash = ((hash * 41) ^ c) % 100057;
 2. Verify hash
 3. Decrypt ciphertext to original plaintext
 
----
+
 
 ## Program Description
 
@@ -103,7 +101,7 @@ The program is menu-driven and provides two options:
 * `autoKeyDecrypt()` → Performs decryption
 * `int polyHash()` → Performs hashing
 
----
+
 
 ## Sample Input and Output
 
@@ -136,4 +134,4 @@ Decrypted Plaintext: INSTAGRAM
 
 The Auto Key Cipher provides better security than repeating-key ciphers by using plaintext to extend the key. This program demonstrates encryption, hashing, and decryption processes and helps in understanding the fundamentals of classical cryptography and data integrity.
 
----
+
