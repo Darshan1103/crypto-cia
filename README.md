@@ -57,9 +57,11 @@ The program is menu-driven and provides two options:
 
 ### Encryption
 
+```
 Enter Plaintext: instagram
 Enter Key: rot
 Ciphertext: ZBLBNYKAS
+```
 
 ### Decryption
 
